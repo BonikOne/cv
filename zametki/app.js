@@ -39,8 +39,8 @@ function createzmtk(title, index) {
         class="list-group-item${title.completed ? "-done" : ""} d-flex justify-content-between align-items-center">
           <span class = ${title.completed ? "zacherknut" : ""}>${title.title}</span>
           <span>
-            ${title.completed ? "" : `<span class="btn btn-small btn-success" data-index="${index}" data-type="toggle">;</span>`}
-            <span class="btn btn-small btn-danger" data-index="${index}" data-type="remove">;</span>
+            ${title.completed ? "" : `<span class="btn btn-small btn-success" data-index="${index}" data-type="toggle"></span>`}
+            <span class="btn btn-small btn-danger" data-index="${index}" data-type="remove"></span>
           </span>
         </li>`
     }
