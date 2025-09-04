@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.calculatorHeader {
+    text-align: center;
+}
+
+.calculatorHeader h1 {
+    font-size: 4rem;
+    color: aqua;
+}
+
+.calculatorContainer {
+    margin: 3.4% auto;
+    width: 500px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 110, 255, 0);
+}
+
+.calculatorDisplay {
+    width: 230px;
+    height: 30px;
+    font-size: 20px;
+    text-align: right;
+    background-color: rgba(0, 255, 255, 0.1);
+    border: 2px solid aqua;
+    border-radius: 10px;
+    color: aqua;
+    outline: none;
+}
+
+.calculatorButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.calculatorButton {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 255, 255, 0.2);
+    color: aqua;
+    border: 2px solid aqua;
+    transition: all 0.3s ease;
+}
+
+.calculatorButton:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.calculatorButton:active {
+    background-color: rgba(0, 255, 255, 0.4);
+    transform: translateY(0);
+}
+
+.operator {
+    background-color: rgba(0, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.equals {
+    background-color: rgba(0, 255, 255, 0.4);
+    font-weight: bold;
+}
+
+.clear {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.clear:hover {
+    background-color: rgba(255, 0, 0, 0.3);
+}

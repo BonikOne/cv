@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё резюме</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .projects h3 {
+      margin-top: 0;
+    }
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Моё резюме</h1>
+    <p>Frontend разработчик | HTML, CSS, JavaScript</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Обо мне</h2>
+      <p>
+        Привет! Я frontend-разработчик, специализирующийся на создании адаптивных
+        и стильных сайтов. Работаю с HTML, CSS и JavaScript. Люблю изучать новые
+        технологии и делать проекты красивыми и удобными.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Мои проекты</h2>
+    <div class="projects" id="projects"></div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Моё портфолио. Все права защищены.
+  </footer>
+
+  <script>
+    const projects = [
+      {
+        title: "Калькулятор",
+        description: "Красивый адаптивный калькулятор с современным дизайном и удобным интерфейсом.",
+        link: "https://bonikone.github.io/cv/calculator/index.html",
+      },
+      {
+        title: "Заметки",
+        description: "Полностью рабочие заметки.",
+        link: "https://bonikone.github.io/cv/zametki/index.html",
+      },
+    ];
+
+    const container = document.getElementById("projects");
+
+    projects.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const h3 = document.createElement("h3");
+      h3.textContent = p.title;
+
+      const desc = document.createElement("p");
+      desc.textContent = p.description;
+
+      const btn = document.createElement("button");
+      btn.textContent = "Смотреть проект";
+      btn.onclick = () => window.open(p.link, "_blank");
+
+      card.appendChild(h3);
+      card.appendChild(desc);
+      card.appendChild(btn);
+
+      container.appendChild(card);
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

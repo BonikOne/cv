@@ -1,0 +1,163 @@
+/* =========================
+   ГЛОБАЛЬНЫЕ СТИЛИ
+========================= */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+/* =========================
+   КОНТЕЙНЕР
+========================= */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 40px;
+  border-radius: 30px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   ЗАГОЛОВОК
+========================= */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0, 234, 255, 0.8);
+}
+
+/* =========================
+   ПОЛЕ ВВОДА
+========================= */
+#title {
+  width: 94%;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#title:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.7);
+}
+
+/* =========================
+   КНОПКА "ДОБАВИТЬ"
+========================= */
+#create {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 16px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #00eaff, #0077ff);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+#create:hover {
+  background: linear-gradient(135deg, #00ffd5, #0099ff);
+  box-shadow: 0 10px 30px rgba(0, 153, 255, 0.6);
+}
+
+/* =========================
+   СПИСОК ЗАМЕТОК
+========================= */
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: rgba(0, 234, 255, 0.25);
+}
+
+.list-group-item-done {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  background: rgba(0, 255, 21, 0.397);
+  transition: all 0.3s ease;
+}
+.list-group-item-done:hover {
+  background: rgba(0, 255, 20, 0.493);
+}
+/* =========================
+   КНОПКИ ДЕЙСТВИЙ
+========================= */
+.btn-small {
+  font-size: 1.2rem;
+  padding: 8px 14px;
+  border-radius: 12px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Подтверждение */
+.btn-success {
+  background: linear-gradient(135deg, #00ff95, #00c851);
+  color: #000;
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #00ffaa, #00e676);
+  transform: scale(1.15);
+}
+
+/* Удаление */
+.btn-danger {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ff5c5c, #ff0000);
+  transform: scale(1.15);
+}
+
+.zacherknut {
+    text-decoration: line-through solid rgb(255, 255, 255) 2px;
+}
