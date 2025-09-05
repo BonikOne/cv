@@ -1,0 +1,71 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #232526, #414345);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #ffd369;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 600px;   /* пошире, чтобы всё влезало */
+  margin: 20px auto;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+label {
+  flex: 1;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.inputElement {
+  flex: 2;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+button {
+  flex: 0 0 120px; /* фиксированная ширина */
+  background: #ffd369;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+button:hover {
+  background: #ffb347;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
